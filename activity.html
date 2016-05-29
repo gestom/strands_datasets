@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <title>STRANDS public datasets</title>
+	<link rel="stylesheet" type="text/css" href="css/dataset.css"/>
+	</head>
+
+	<body>
+
+	<h2>Long-term person activity datasets</h2>
+
+	<p align="justify">This dataset contains information about a given person activity over several weeks.
+	It was used to evaluate which type of spatio-temporal models improve the accuracy of activity classification over time.
+	The dataset contains information about human activity in two different environments: 
+	<ul>
+	<li><b>Aruba</b> dataset contains person activity collected at a smart apartment by the Center for Advanced Studies in Adaptive Systems, <a href="http://ailab.wsu.edu/casas/" target="_blank">CASAS</a>,</li>
+	<li><b>Witham Wharf</b> dataset shows student activity at the Lincoln Centre for Autonomous System, <a href="http://robots.lincoln.ac.uk/" target="_blank">LCAS</a>),</li>
+	</ul>
+	<hr/>
+
+
+	<h3>Dataset structure</h3>
+	<h4>Aruba</h4>
+	
+	<table border="0" align="center"> 
+	<tr><td><img  width="420" src="images/aruba-flat.png"/></td><td><img width="380" src="images/aruba-scheme.jpg"/></td><tr>
+	<tr><td align="center">Aruba apartment visualisation</td><td align="center">Aruba sensor layout (see <a href="http://ailab.wsu.edu/casas/" target="_blank">CASAS</a>)</td><tr>
+	</table>
+	</br>
+
+
+	<p align="justify">The <b>Aruba</b> folder contains <i>activity.min</i>, which indicates the ativity performed by a home-bound person in a small apartment every minute for 16 weeks. 
+	The <i>locations.min</i> contain the person location (room) minute-by-minute as well.
+	The <i>location.names</i> and <i>activity.names</i> indicate which rooms and activitie correspond to which number in the <i>activity.min</i> and <i>location.min</i> files.
+	Example: number 0 on line 10 of the <i>location.min</i> means and 2 on <i>activity.min</i> that in 10th minute after midnight of the first day, the person was <i>Eating</i> in the <i>Master bedroom</i>. 
+	<b>Aruba</b> was extracted from the <a href="http://ailab.wsu.edu/casas/" target="_blank">CASAS</a> datasets.</p>
+
+
+	<h4>Witham Wharf</h4>
+	
+	<table border="0" align="center"> 
+	<tr><td><img  width="420" src="images/witham-cam.jpg"/></td><td><img width="380" src="images/witham-topo.png"/></td><tr>
+	<tr><td align="center">Witham office overview</td><td align="center">Witham office topological layout</td><tr>
+	</table>
+	</br>
+
+	<p align="justify">The <b>Witham Wharf</b> directory contains activity of a particular student in an open-plan office for three weeks. 
+	Again, <i>locations.names</i> and <i>activity.names</i> files describe the locations and activities, which are stored in <i>location.min</i> and <i>activity.min</i> files.</p>
+
+
+	<h3>Download</h3>
+	
+	<p align="justify">All of these datasets are available for download in a single archive <a href="activity/activity.zip">file</a>.
+	After you unzip the file, you get two folders which correspond to the individual datasets.</p>
+
+	<hr/>
+
+	<h3>Condition of use</h3>
+	<p align="justify">If you use the dataset for your research, please cite our <a href="activity/paper.pdf">paper</a> that describes it.
+	We attached a <a href="activity/paper.bib">bibtex</a> record for your convenience.
+	If you use the <b>Aruba</b> subset, you must also acknowledge the original <a href="presence/aruba.bib">CASAS</a> paper.</p>
+	<p><hr/>This dataset is part of the larger <a href="index.html" target="_blank">LCAS-STRANDS long-term dataset collection</a>.</p>
+	</body>
+</html>
