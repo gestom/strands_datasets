@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <title>STRANDS public datasets</title>
+	<link rel="stylesheet" type="text/css" href="css/dataset.css"/>
+	</head>
+
+	<body>
+
+	<h2>Object/people presence aka where is Waldo? datasets</h2>
+
+	<p align="justify">This dataset contains information about people and object presence gathered in three different environments.
+	The dataset is divided in three smaller ones according to the environment these were gathered in:
+	<ul>
+	<li><b>Aruba</b> dataset of person presence collected at a smart apartment by the Center for Advanced Studies in Adaptive Systems, <a href="http://ailab.wsu.edu/casas/" target="_blank">CASAS</a>,</li>
+	<li><b>Brayford</b> dataset of person presence created at the premised of the Lincoln Centre for Autonomous System, <a href="http://robots.lincoln.ac.uk/" target="_blank">LCAS</a>),</li>
+	<li><b>KTH</b> dataset of object presence created by the Centre of Autonomous Systems of the Royal Institute of Technology in Stockholm, <a href="http://www.cas.kth.se/" target="_blank">CAS/KTH</a>.</li>
+	</ul>
+	<hr/>
+
+
+	<h3>Dataset structure</h3>
+	<h4>Aruba</h4>
+	
+	<table border="0" align="center"> 
+	<tr><td><img  width="420" src="images/aruba-flat.png"/></td><td><img width="380" src="images/aruba-scheme.jpg"/></td><tr>
+	<tr><td align="center">Aruba apartment visualisation</td><td align="center">Aruba sensor layout (see <a href="http://ailab.wsu.edu/casas/" target="_blank">CASAS</a>)</td><tr>
+	</table>
+	</br>
+
+
+	<p align="justify">The <b>Aruba</b> folder contains <i>locations.min</i>, which contains the location (room) of a person in a small apartment every minute for 16 weeks. 
+	The <i>locations.names</i> indicate which rooms corresponds to which number. 
+	Example: number 0 on line 10 of the locations.min means that in 10th minute after midnight of the first day, the person was in the <i>Master bedroom</i>. 
+	<b>Aruba</b> was extracted from the <a href="http://ailab.wsu.edu/casas/" target="_blank">CASAS</a> datasets.</p>
+
+
+	<h4>Brayford</h4>
+	
+	<table border="0" align="center"> 
+	<tr><td><img src="images/brayford_top.png"/></td><tr>
+	<tr><td align="center">Brayford office locations and topological structure</td><tr>
+	</table>
+	</br>
+
+	<p align="justify">The <b>Brayford</b> directory contains presence of people every 10 minutes on eight different areas in an open-plan office. 
+	Again, <i>locations.names</i> file describes the locations. Example: Having '0'  on line 6 of file 'learning_06.txt' means that there was no-one at 1:00AM in the kitchenette.</p>
+
+
+	<h4>KTH</h4>
+
+	<table border="0" align="center"> 
+	<tr><td><img width="750" src="images/observation.png"/></td><tr>
+	<tr><td align="center">KTH dataset: object retrieval from point cloud data</td><tr>
+	</table>
+	</br>
+
+	<p align="justify">The <b>KTH</b> data containe presence of objects observed by a mobile robot at different rooms  of the <a href="http://www.cas.kth.se/" target="_blank">CAS/KTH</a>.
+	The observations are stored in  *.occ files that have 'epoch time' + presence of a given object at that time. Description of the individual objects is also provided in the <i>clusters_meaning</i> file.
+	Example: line 50 of the <i>test/31.occ</i> file indicates that 'Johan's laptop' was present at time 1411317123 (which is Sunday September 21, 2014 18:32:03).</p>
+	<hr/>
+
+	<h3>Download</h3>
+	
+	<p align="justify">All of these datasets are available for download in a single archive <a href="presence/strands.zip">file</a>.
+	After you unzip the file, you get three folders which correspond to the individual datasets.</p>
+
+	<hr/>
+
+	<h3>Condition of use</h3>
+	<p align="justify">If you use the dataset for your research, please cite our <a href="presence/paper.pdf">paper</a> that describes it.
+	We attached a <a href="presence/paper.bib">bibtex</a> record for your convenience.
+	If you use the <b>Aruba</b> subset, you must also acknowledge the original <a href="presence/aruba.bib">CASAS</a> paper.</p>
+	<p><hr/>This dataset is part of the larger <a href="index.html" target="_blank">LCAS-STRANDS long-term dataset collection</a>.</p>
+	</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <title>STRANDS public datasets</title>
+	</head>
+
+	<body>
+        <h1>STRANDS public datasets</h1>
+	Here are datasets that we used for long-term autonomy.
+	<hr/>
+	<h2>Witham Wharf RGB-D dataset</h2>
+	
+	The Witham Wharf was collected for purposes of testing RGB-D localization in changing environments.
+	The dataset consists of one training set and three testing sets that cover changes of eight locations in an open-plan office for one year.
+
+	<h3>Download</h3>
+		<table border="1" \>
+		<tr><td>Name</td><td>Length</td><td>Date</td></tr>
+		<tr><td><a href="WW_RGB/training_Nov.zip">November 2014 training</a></td><td>7 days</td><td>second week of November 2014</td></tr>
+		<tr><td><a href="WW_RGB/testing_Nov.zip">November 2014 testing</a></td><td>1 day</td><td>one week after training</td></tr>
+		<tr><td><a href="WW_RGB/testing_Feb.zip">February 2015 testing</a></td><td>1 day</td><td>three months after training</td></tr>
+		<tr><td><a href="WW_RGB/testing_Dec.zip">December 2015 testing</a></td><td>1 day</td><td>one year after training</td></tr>
+		<tr><td><a href="WW_RGB/tranimage.zip">Complete dataset</a></td><td>10 days</td><td>all of the above</td></tr>
+		</table>
+
+	<h3>Why and how was the dataset gathered</h3>
+	<p>The intended use was to create a dataset to benchmark visual localization in changing environments.
+	See and hear the 2 minute video below. If you are interrested only in how the dataset was collected, simply skip the first minute of the video or click <a href="https://www.youtube.com/watch?feature=player_detailpage&v=aTr9KD4XMGc#t=74">here</a>.</p>
+	<br/>
+	<iframe width="640" height="360" src="https://www.youtube.com/embed/aTr9KD4XMGc?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+	<br/>
+	
+	<h3>Organisation</h3>
+	<p>Color images of the dataset are arranged into eight folders according to the location they were captured at.
+	Images were captured on a regular basis every 10 minutes and their filename corresponds to the time they were captured at.
+	For example <i>00000.bmp</i> was captured at midnight the first day, <i>00012.bmp</i> at 2:10 am and <i>00145.bmp</i> at 0:10am of the second day of the data collection.
+	Please note that sometimes the robot got stuck and failed to capture an image at a given location.
+	For our method, we needed to substitute these missing images by taking the last previously captured image.</p>
+
+	<h3>Dataset use</h3>
+	If you use the dataset for your research, it is mandatory to cite our <a href="WW_RGB/paper.pdf">paper</a> that describes it.
+	We attached a <a href="WW_RGB/paper.bib">bibtex</a> record for your convenience.
+	<hr/>
+
+	<h2>Lincoln lecturer long and deep (dataset)</h2>
+
+	This dataset contains depth images captured by a stationary Asus Xtion sensor located in a small lecturer office in the University of Lincoln.
+	The sensor captures a depth image every 5 seconds since April 2013 and files are uploaded automagically every day. 
+	The data is recorded simply as a sequence of 320x240x16b images, so you need to download a few <a href="GREG/files/utilities.zip">utilities</a> to convert them to ROS-compatible or Asus-native formats.
+	<br/> 
+	<table border="0"> 
+	<tr><td><img src="GREG/greg.png"/></td><td><img src="GREG/none.png"/></td></tr>
+	<tr><td>Typical afternoon depth map.</td><td>Typical midnight depth map.</td></tr>
+	</table> 
+	<br/>
+ 
+	<h3>Download</h3>
+	The depth images, organised in chunks of one-day length are <a href="GREG/">here</a>. The dataset collection is in progress and a new file should be added every day.
+
+	<h3>Dataset use</h3>
+	If you use the dataset for your research, it is mandatory to cite our <a href="GREG/paper.pdf">paper</a> that describes it.
+	We attached a <a href="GREG/paper.bib">bibtex</a> record for your convenience.
+	<hr/>
+
+	<hr/>
+	<h3>Acknowledgements</h3>
+	Collection and pre-processing of these datasets was funded by the EU-funded project <a href="http://strands-project.eu"/>STRANDS</a> - <i>Spatio-Temporal Representation and Activities for Cognitive Control in Long-Term Scenarios</i>, reference 600623.
+	<hr/>
+	<hr/>
+	<hr/>
+	<h2>We are working hard to finish this page, please be patient.</h2>
+	<img src="images/construction.jpg"/>
+	</body>
+</html>

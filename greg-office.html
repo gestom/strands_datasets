@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <title>STRANDS public datasets</title>
+	<link rel="stylesheet" type="text/css" href="css/dataset.css"/>
+	</head>
+
+	<body>
+
+	<h2>MHT building lecturer office</h2>
+
+	<p align="justify">This dataset contains depth images captured by a stationary Asus Xtion sensor located in a small lecturer office in the University of Lincoln.
+	The sensor captures a depth image every 5 seconds since April 2014 and the depth data are compressed and uploaded automatically every day. 
+	The data is recorded simply as a stream of 320x240x16b images. To convert them to ROS-compatible <i>image_raw</i> format, you will need to use the <i>convert_raw</i> utility, which is part of the <a href="https://github.com/gestom/fremen/tree/master/froctomap" target="_blank">froctomap</a> package.</p>
+
+	<br/> 
+	<br/> 
+	<br/> 
+	<table border="0" align="center"> 
+	<tr><td align="center"><img width="320" src="GREG/greg.png"/>	</td>	<td align="center"><img width="320" src="GREG/none.png"/>	</td></tr>
+	<tr><td align="center">Typical afternoon depth map.	</td>	<td align="center">Typical midnight depth map.	</td></tr>
+	</table> 
+	<br/>
+	<br/>
+	<hr/>
+ 
+	<h3>Dataset structure and download</h3>
+	<p align="justify">The depth images, organised in chunks of one-day length are <a href="GREG/" target="_blank">here</a>. 
+	Each zip archive contains a <i>xx.3D</i> file with the depth image taked every 5 seconds and a <i>xx.1D</i> file that contains timestamps and distance of central pixel of the depth image taken at 30Hz.
+	The date and time, encoded in the file name, denote the moment when the data collection started. 
+	Note that since a frame is captured every 5 seconds, the first frame of <i>2016-02-25_23:59:56.3D</i> file is actually taken at midnight Feb 26 2016. 
+	The dataset collection is still in progress and a new file should be added every day automagically.</p> 
+
+	<p align="justify">To obtain ROS-compatible depth data stream, unzip the downloaded file, and use the <i>convert_raw</i> utility, which is part of the <a href="http://github.com/gestom/fremen/tree/master/froctomap" target="_blank">froctomap</a> package.
+	Calling <i>rosrun froctomap convert_raw xxx.3D</i> will publish the depth images on the <i>/camera/depth/image_raw</i> topic with the timestamp from the data collection time.
+	To modify the timestamp to the current time, simply do the changes aroung line 97 of <a href="https://github.com/gestom/fremen/blob/master/froctomap/src/convert_raw.cpp" target="_blank">convert_raw.cpp</a>.</p>
+	<hr/>
+
+	<h3>Conditions of use</h3>
+	<p align="justify">If you use the dataset for your research, please cite our <a href="GREG/paper.pdf">paper</a> that describes it.
+	We attached a <a href="GREG/paper.bib">bibtex</a> record for your convenience.</p>
+	<p><hr/>This dataset is part of the larger <a href="index.html" target="_blank">LCAS-STRANDS long-term dataset collection</a>.</p>
+	</body>
+</html>
